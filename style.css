@@ -109,6 +109,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+#reader-view[hidden] {
+  display: none;
+}
 
 .reader-topbar {
   position: absolute;
