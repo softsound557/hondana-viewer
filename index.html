@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>本棚</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#2b2b2b">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div id="status" class="status" hidden></div>
+
+  <section id="setup-view" hidden>
+    <p>Microsoftアカウントでサインインすると、OneDrive上の「本棚エクスポート」フォルダを読み込みます。</p>
+    <button type="button" id="signin-button" class="save-button">Microsoftアカウントでサインイン</button>
+  </section>
+
+  <section id="shelf-view" hidden>
+    <h1 class="shelf-title">本棚</h1>
+    <div class="count" id="count"></div>
+    <div class="shelf-grid" id="shelf-grid"></div>
+    <a href="#" id="settings-link" class="settings-link">サインアウトする</a>
+  </section>
+</main>
+
+<section id="reader-view" hidden>
+  <div class="reader-topbar">
+    <a href="#" id="reader-back" class="reader-back">← 本棚へ</a>
+    <div class="reader-page-indicator" id="reader-page-indicator"></div>
+  </div>
+  <div class="reader-viewport" id="reader-viewport">
+    <img id="reader-image" class="reader-image" alt="">
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@2/lib/msal-browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
