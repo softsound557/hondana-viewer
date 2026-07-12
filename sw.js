@@ -1,5 +1,5 @@
-const SHELL_CACHE = "shell-v1";
-const DATA_CACHE = "data-v1";
+const SHELL_CACHE = "shell-v2";
+const DATA_CACHE = "data-v2";
 const SHELL_FILES = [
   "index.html",
   "app.js",
